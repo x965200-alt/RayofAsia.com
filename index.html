@@ -1,1 +1,274 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ray Asia Official</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
 
+<body oncontextmenu="return false;">
+
+    <div id="loading-screen">
+        <img src="https://i.postimg.cc/XqLsL0SQ/IMG-20260614-011917-153.jpg" alt="Ray Asia Logo" class="loader-logo">
+    </div>
+
+    <div id="toast"><i class="fa-solid fa-clock"></i> Coming Soon...</div>
+
+    <div id="particles-js"></div>
+
+    <div class="card" id="main-card">
+        <!-- HEADER -->
+        <div class="card-header">
+            <img src="https://i.postimg.cc/XqLsL0SQ/IMG-20260614-011917-153.jpg" alt="Live Noir Logo" class="logo-img">
+            <div class="name-container">
+                <h2 class="brand-name">Ray Asia</h2>
+                <img src="https://i.postimg.cc/85YrRKsR/1781383157603.png" alt="Verified Badge" class="verified-badge">
+            </div>
+        </div>
+
+        <!-- MAIN VIEW -->
+        <div id="main-view" class="view-container">
+            <div class="button-section">
+                <div class="button-row">
+                    <a href="https://youtu.be/7_TLC3yKqPw?si=-3WiNUZXNiKwjS4V" target="_blank" class="action-btn">
+                        <i class="fa-brands fa-youtube"></i> YouTube
+                    </a>
+                    <a href="https://www.facebook.com/share/1Sc5qZiZN3/" target="_blank" class="action-btn">
+                        <i class="fa-brands fa-facebook-f"></i> Facebook
+                    </a>
+                </div>
+                <div class="button-row">
+                    <a href="https://chat.whatsapp.com/DBJ3O1j1kPHI1vYvbprGcO" target="_blank" class="action-btn">
+                        <i class="fa-solid fa-circle-check"></i> Proof
+                    </a>
+                </div>
+            </div>
+
+            <div class="promo-container">
+                <a href="https://youtu.be/7_TLC3yKqPw?si=-3WiNUZXNiKwjS4V" target="_blank">
+                    <img src="https://i.postimg.cc/fR5ZbZDp/IMG-20260614-WA0017.jpg" alt="Promo Image" class="promo-img">
+                </a>
+            </div>
+
+            <div class="bottom-buttons">
+                <a href="#" onclick="showPromoView(); return false;" class="wide-btn">
+                    <i class="fa-solid fa-gift"></i> Promo Codes & Links
+                </a>
+                <a href="#" onclick="showChatView(); return false;" class="wide-btn">
+                    <i class="fa-solid fa-headset"></i> Customer Support
+                </a>
+                <a href="#" onclick="showVoiceView(); return false;" class="wide-btn">
+                    <i class="fa-solid fa-microphone-lines"></i> Voice Feedback
+                </a>
+                <a href="#" onclick="showContactView(); return false;" class="wide-btn">
+                    <i class="fa-solid fa-address-book"></i> Contact
+                </a>
+            </div>
+        </div>
+
+        <!-- PROMO VIEW -->
+        <div id="promo-view" class="view-container" style="display: none; padding: 0 20px;">
+            <h3 class="promo-view-title"><i class="fa-solid fa-gift"></i> Promo Codes & Links</h3>
+            
+            <div class="promo-box">
+                <div class="promo-box-header">
+                    <div class="promo-brand-info">
+                        <img src="https://i.postimg.cc/wT2Dcfzq/1xbet-(1).png" class="promo-brand-logo">
+                        <h4 class="promo-brand-name">1xBet</h4>
+                    </div>
+                    <a href="https://reffpa.com/L?tag=d_5644583m_97c_&site=5644583&ad=97&r=bonus/rules/t20-blast2026" target="_blank" class="visit-site-link">Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <span class="promo-code-label">Promo Code</span>
+                <div class="promo-code-area">
+                    <span class="promo-code-text" id="promo1">SLR70</span>
+                    <button class="copy-btn" onclick="copyCode('promo1', this)"><i class="fa-solid fa-copy"></i> Copy</button>
+                </div>
+            </div>
+
+            <div class="promo-box">
+                <div class="promo-box-header">
+                    <div class="promo-brand-info">
+                        <img src="https://i.postimg.cc/hGSwZ3z6/888starz.png" class="promo-brand-logo">
+                        <h4 class="promo-brand-name">888Starz</h4>
+                    </div>
+                    <a href="https://top100bonus.com/L?tag=d_5494354m_132659c_&site=5494354&ad=132659" target="_blank" class="visit-site-link">Visit Site <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                <span class="promo-code-label">Promo Code</span>
+                <div class="promo-code-area">
+                    <span class="promo-code-text" id="promo2">SL58</span>
+                    <button class="copy-btn" onclick="copyCode('promo2', this)"><i class="fa-solid fa-copy"></i> Copy</button>
+                </div>
+            </div>
+
+            <a href="#" onclick="showMainView(); return false;" class="wide-btn back-home-btn">
+                <i class="fa-solid fa-house"></i> Back to Home
+            </a>
+        </div>
+
+        <!-- VOICE FEEDBACK VIEW -->
+        <div id="voice-view" class="view-container" style="display: none; padding: 0 20px;">
+            <h3 class="promo-view-title"><i class="fa-solid fa-microphone-lines"></i> Feedback Voices</h3>
+            
+            <div class="voice-card">
+                <span class="voice-name">Amitha</span>
+                <div class="voice-progress-container">
+                    <input type="range" class="voice-progress" id="progress-amitha" value="0" min="0" max="100" step="1" oninput="seekAudio('amitha', this)">
+                </div>
+                <button class="voice-play-btn" onclick="toggleAudio('amitha')">
+                    <i class="fa-solid fa-play" id="icon-amitha"></i>
+                </button>
+                <audio id="audio-amitha" preload="metadata" ontimeupdate="updateProgress('amitha')" onended="resetAudio('amitha')">
+                    <source src="https://media.vocaroo.com/mp3/1kMqYf9rzDLK" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <div class="voice-card">
+                <span class="voice-name">Nadun</span>
+                <div class="voice-progress-container">
+                    <input type="range" class="voice-progress" id="progress-nadun" value="0" min="0" max="100" step="1" oninput="seekAudio('nadun', this)">
+                </div>
+                <button class="voice-play-btn" onclick="toggleAudio('nadun')">
+                    <i class="fa-solid fa-play" id="icon-nadun"></i>
+                </button>
+                <audio id="audio-nadun" preload="metadata" ontimeupdate="updateProgress('nadun')" onended="resetAudio('nadun')">
+                    <source src="https://media.vocaroo.com/mp3/1eF5OQRytc7Y" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <div class="voice-card">
+                <span class="voice-name">Saduni</span>
+                <div class="voice-progress-container">
+                    <input type="range" class="voice-progress" id="progress-ashoka" value="0" min="0" max="100" step="1" oninput="seekAudio('ashoka', this)">
+                </div>
+                <button class="voice-play-btn" onclick="toggleAudio('ashoka')">
+                    <i class="fa-solid fa-play" id="icon-ashoka"></i>
+                </button>
+                <audio id="audio-ashoka" preload="metadata" ontimeupdate="updateProgress('ashoka')" onended="resetAudio('ashoka')">
+                    <source src="https://media.vocaroo.com/mp3/117s0J0szxWU" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <div class="voice-card">
+                <span class="voice-name">Nishan</span>
+                <div class="voice-progress-container">
+                    <input type="range" class="voice-progress" id="progress-kavishka" value="0" min="0" max="100" step="1" oninput="seekAudio('kavishka', this)">
+                </div>
+                <button class="voice-play-btn" onclick="toggleAudio('kavishka')">
+                    <i class="fa-solid fa-play" id="icon-kavishka"></i>
+                </button>
+                <audio id="audio-kavishka" preload="metadata" ontimeupdate="updateProgress('kavishka')" onended="resetAudio('kavishka')">
+                    <source src="https://media.vocaroo.com/mp3/1b5KtM7SA7I0" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <!-- අලුතින් එකතු කළ Shenali ගේ Voice එක -->
+            <div class="voice-card">
+                <span class="voice-name">Shenali</span>
+                <div class="voice-progress-container">
+                    <input type="range" class="voice-progress" id="progress-shenali" value="0" min="0" max="100" step="1" oninput="seekAudio('shenali', this)">
+                </div>
+                <button class="voice-play-btn" onclick="toggleAudio('shenali')">
+                    <i class="fa-solid fa-play" id="icon-shenali"></i>
+                </button>
+                <audio id="audio-shenali" preload="metadata" ontimeupdate="updateProgress('shenali')" onended="resetAudio('shenali')">
+                    <source src="https://media.vocaroo.com/mp3/1iwOvJMBXWhk" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <a href="#" onclick="showMainView(); return false;" class="wide-btn back-home-btn" style="margin-top: 20px;">
+                <i class="fa-solid fa-house"></i> Back to Home
+            </a>
+        </div>
+
+        <!-- NEW CONTACT VIEW -->
+        <div id="contact-view" class="view-container" style="display: none; padding: 0 20px;">
+            <h3 class="promo-view-title"><i class="fa-solid fa-address-book"></i> Contact Us</h3>
+            
+            <div class="voice-card">
+                <i class="fa-brands fa-whatsapp" style="font-size: 35px; color: #25D366; text-shadow: 0 0 10px rgba(37, 211, 102, 0.5);"></i>
+                <span style="color: #fff; font-size: 18px; font-weight: bold; flex-grow: 1; margin-left: 15px;">WhatsApp</span>
+                <a href="https://wa.me/94776534216?text=Hi" target="_blank" class="voice-play-btn" style="text-decoration: none;">
+                    <i class="fa-solid fa-comment-dots"></i>
+                </a>
+            </div>
+
+            <div class="voice-card">
+                <i class="fa-brands fa-telegram" style="font-size: 35px; color: #0088cc; text-shadow: 0 0 10px rgba(0, 136, 204, 0.5);"></i>
+                <span style="color: #fff; font-size: 18px; font-weight: bold; flex-grow: 1; margin-left: 15px;">Telegram</span>
+                <a href="https://t.me/Ray_asia?text=Hi" target="_blank" class="voice-play-btn" style="text-decoration: none;">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </a>
+            </div>
+
+            <a href="#" onclick="showMainView(); return false;" class="wide-btn back-home-btn" style="margin-top: 20px;">
+                <i class="fa-solid fa-house"></i> Back to Home
+            </a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer-area">
+        &copy; 2026 Official Ray Asia. All Rights Reserved.<br>
+        Developed By <a href="https://t.me/Ray_asia" target="_blank">RayAsia</a>
+    </div>
+
+    <!-- FULL SCREEN CHAT OVERLAY -->
+    <div id="chat-view">
+        <div class="chat-header-fs">
+            <button class="back-arrow-btn" onclick="closeChatView()"><i class="fa-solid fa-arrow-left"></i></button>
+            <div class="chat-user-details">
+                <img src="https://i.postimg.cc/XqLsL0SQ/IMG-20260614-011917-153.jpg" class="chat-avatar">
+                <div class="chat-user-info">
+                    <span class="chat-user-name">Ray Asia <img src="https://i.postimg.cc/85YrRKsR/1781383157603.png" style="width:16px; height:16px; object-fit:contain;"></span>
+                    <span class="chat-status">Online</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-body-fs" id="chat-box">
+            <!-- Initial Chat Greeting -->
+            <div class="chat-msg-received">හෙලෝ! Ray Asia කස්ටමර් සපෝට් එකට සාදරයෙන් පිළිගන්නවා. ඔබට මොන වගේ සහයක්ද අවශ්‍ය?</div>
+        </div>
+
+        <div class="chat-footer-input">
+            <label class="chat-icon-btn" onclick="showComingSoon()"><i class="fa-solid fa-paperclip"></i></label>
+            <i class="fa-solid fa-microphone chat-icon-btn" onclick="showComingSoon()"></i>
+            
+            <input type="text" id="chat-input" class="chat-input-field" placeholder="Type a message..." onkeypress="handleEnter(event)">
+            <i class="fa-solid fa-paper-plane chat-icon-btn send-btn" onclick="sendTextMessage()"></i>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- Firebase Initialization -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+        import { getFirestore, collection, addDoc, serverTimestamp, onSnapshot, query, where } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDMn0tymCqzEocO9bOkiomKBTZ2twRctD8",
+            authDomain: "rayasia-ca8ad.firebaseapp.com",
+            projectId: "rayasia-ca8ad",
+            storageBucket: "rayasia-ca8ad.firebasestorage.app",
+            messagingSenderId: "518542105086",
+            appId: "1:518542105086:web:e115d373ee722076dc48af",
+            measurementId: "G-QK59HNFY3P"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        
+        window.firebaseDb = getFirestore(app);
+        window.fbCollection = collection;
+        window.fbAddDoc = addDoc;
+        window.fbServerTimestamp = serverTimestamp;
+        window.fbOnSnapshot = onSnapshot;
+        window.fbQuery = query;
+        window.fbWhere = where;
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
